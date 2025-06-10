@@ -1,0 +1,68 @@
+name: task_manager_app
+description: A simple task manager application built with Flutter.
+
+publish_to: 'none' # Remove this line if you plan to publish the app
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0' # Keep your SDK constraints
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # Firebase dependencies (Updated firebase_core for compatibility)
+  firebase_core: ^2.24.2 # Updated for compatibility with cloud_firestore
+  firebase_auth: ^4.19.1
+  cloud_firestore: ^4.17.5 # Added caret for recommended practice
+
+  # Utility packages
+  cupertino_icons: ^1.0.2
+  cached_network_image: ^3.0.0 # <<< Add this line (check pub.dev for latest stable) >>>
+  uuid: ^4.0.0
+  intl: ^0.18.1
+  dartz: ^0.10.1
+  equatable: ^2.0.5
+
+  # State Management (Keep these versions as they are consistent)
+  flutter_riverpod: ^2.3.6
+  riverpod_annotation: ^2.3.4
+  freezed_annotation: ^2.4.1  # <-- Updated version
+  json_annotation: ^4.8.0
+
+  http: ^1.2.1 # Or dio: ^5.0.0 if you prefer
+  geolocator: ^11.0.0
+  geocoding: ^3.0.0
+  permission_handler: ^11.3.0 # Often needed with geolocator
+
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^2.0.0
+  # Keep these versions for code generation tools (compatible with Riverpod 2.3.x)
+  riverpod_generator: ^2.3.6
+  build_runner: ^2.3.3
+  freezed: ^2.5.2          # <-- Updated version
+
+  # Optional: JSON serialization helpers
+  json_serializable: ^6.7.1
+
+
+
+  # Optional: Mocking framework for testing (uncomment if needed)
+  # mockito: ^5.4.4
+
+  # --- REMOVED: analyzer_plugin ---
+
+
+flutter:
+  uses-material-design: true
+
+  assets:
+      - assets/images/
+
+
